@@ -1,5 +1,5 @@
 name:                haskell2package
-version:             1.3.0
+version:             1.4.0
 synopsis:            Builds .rpms and .debs from Haskell projects
 description:         Parses cabal files and generates a specfile or control file,
                      which is then used to build an rpm or deb respectively,
@@ -7,8 +7,8 @@ description:         Parses cabal files and generates a specfile or control file
 license:             BSD3
 license-file:        LICENSE
 author:              Oswyn Brent
-maintainer:          Anchor Engineering <engineering@anchor.net.au>
-copyright:           Anchor Engineering 2014
+maintainer:          Oswyn Brent <oztastic703@gmail.com>
+copyright:           Anchor Engineering and Oswyn Brent 2014-2016
 category:            Development
 build-type:          Simple
 extra-source-files:  README.md
@@ -19,7 +19,7 @@ data-files:          templates/TEMPLATE.spec
 
 source-repository    head
    type:             git
-   location:         git@github.com:anchor/haskell2package.git
+   location:         git@github.com:oswynb/haskell2package.git
 
 library
   exposed-modules:     Anchor.Package.Process

@@ -13,7 +13,6 @@ import qualified Data.Set               as S
 import           Data.Time.Clock
 import           Data.Time.Format
 import           System.FilePath.Posix
-import           System.Locale
 import           System.Process
 
 import           Anchor.Package.Types

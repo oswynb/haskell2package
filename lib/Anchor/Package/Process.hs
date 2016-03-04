@@ -147,7 +147,7 @@ genPackagerInfo = do
                     go (foldl' addCode repos codes) (page+1) token
         addCode :: M.Map String (S.Set FilePath) -> Code -> M.Map String (S.Set FilePath)
         addCode repos Code{..} = M.insertWith (<>) (repoName codeRepo) (S.singleton $ dropWhile (=='/') codePath) repos
-    cloneAndFindDeps :: String -> FilePath -> PackageIndex -> M.Map String (S.Set FilePath) -> IO (S.Set FilePath)
+    cloneAndFindDeps :: String -> FilePath -> InstalledPackageIndex -> M.Map String (S.Set FilePath) -> IO (S.Set FilePath)
     cloneAndFindDeps target workspacePath installed anchorRepos = do
         let anchorRepos' = do
                 (repo,cabal_files) <- M.toList anchorRepos
